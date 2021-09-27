@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Wrapper, Content } from "./Home.style";
 // import hooks
 import { useHomeHook } from "./Hooks/useHomeHook";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   //Set States
@@ -18,7 +19,12 @@ const Home = () => {
             <div className="coins-list">
               <div className="logo-and-name">
                 <img src={e.image} alt="" />
-                <h1>{e.name}</h1>
+                <Link
+                  to={`/results/${e.name}`}
+                  style={{ textDecoration: "none" }}
+                >
+                  {e.name}
+                </Link>
               </div>
               <h3>24Hr High: ${e.high_24h.toLocaleString()}</h3>
               <h3>24Hr Low: ${e.low_24h.toLocaleString()}</h3>

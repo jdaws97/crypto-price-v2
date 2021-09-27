@@ -36,6 +36,7 @@ const Searchresult = ({ match }) => {
     // Cleaned the data and then formatted the data to look the way I want //
     // added commas to the prices, lowercased the names for easier searches //
     const cleanCoins = grabAllCoins.data;
+
     const mapNamesToLowerCase = cleanCoins.map((e) => {
       e.name = e.name.toLowerCase();
       e.current_price = e.current_price.toLocaleString();
@@ -45,14 +46,17 @@ const Searchresult = ({ match }) => {
       return e;
     });
 
+    const removeExtraSpace = (s) => s.trim().split(/ +/).join(" ");
+    const searchWithOutSpaces = removeExtraSpace(match.params.searchresult);
+
     if (
       mapNamesToLowerCase.find(
-        (e) => e.name == match.params.searchresult.toLowerCase()
+        (e) => e.name == searchWithOutSpaces.toLowerCase()
       )
     ) {
       // Filtering the data for the specific coin //
       const findCoinData = mapNamesToLowerCase.filter(
-        (e) => e.name == match.params.searchresult.toLowerCase()
+        (e) => e.name == searchWithOutSpaces.toLowerCase()
       );
 
       // Created an array of the coins ID's just in case //
@@ -78,7 +82,7 @@ const Searchresult = ({ match }) => {
       const coinPercentChange = cleanCoinData.market_cap_change_percentage_24h;
       const hourHigh = cleanCoinData.high_24h;
       return (
-        //console.log(marketChart),
+        console.log(cleanCoins),
         // Setting all my states //
         setMarketData(marketChartPrice),
         setCoinData(cleanCoinData),
@@ -179,7 +183,6 @@ const Searchresult = ({ match }) => {
         beginAtZero: true,
 
         ticks: {
-          precision: 5,
           autoSkip: true,
           callback: function (value, index) {
             value < 100

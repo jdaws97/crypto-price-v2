@@ -1,9 +1,14 @@
-# syntax=docker/dockerfile:1
-FROM alpine:latest
-RUN apk add --no-cache nodejs npm
-WORKDIR /src
+# pull official base image
+FROM node:14.17.6-buster
+
+# set working directory
+WORKDIR /code
+COPY package.json /code/package.json
+COPY package-lock.json /code/package-lock.json
+
+RUN npm install
+
 COPY . .
-RUN npm install 
-EXPOSE 9005
-ENTRYPOINT ["node"]
-CMD ["/src/App.js"]
+
+CMD ["npm", "run", "start"]
+

@@ -18,6 +18,7 @@ export const Content = styled.div`
     background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
     margin: 15px;
     justify-content: space-between;
+    padding: 1.5vh;
     border-radius: 10vh;
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
       margin: 10px;
@@ -44,7 +45,13 @@ export const Content = styled.div`
     }
     .logo-and-name {
       display: flex;
-      font-size: 2vh;
+      font-size: 4vh;
+
+      a {
+        color: black;
+        font-weight: bold;
+      }
+
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
         font-size: 1.2vh;
         padding-right: 1vh;
@@ -53,6 +60,7 @@ export const Content = styled.div`
       img {
         margin: auto;
         height: 5vh;
+
         padding-left: 2vh;
         padding-right: 2vh;
         @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
