@@ -1,5 +1,5 @@
 
-### Steps needed to run this file locally:
+### Steps needed to run this file locally: ----> (it's assumed you already have the nodejs package manager and npm installed, if you don't follow these instructions: https://nodejs.org/en/download/ - if you're on Linux, you may need to run `sudo apt install nodejs` and then `sudo apt install npm`)
 
 First, you can run this command to clone this repository:
 
