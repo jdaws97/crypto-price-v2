@@ -2,9 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# First, you can clone the repository by running:
+## First, you can clone the repository by running:
 
-### git clone https://github.com/jdaws97/crypto-price-v2
+### `git clone https://github.com/jdaws97/crypto-price-v2`
 
 In the project directory, you can run:
 
