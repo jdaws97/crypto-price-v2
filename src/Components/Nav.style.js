@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
 export const Content = styled.div`
   text-align: center;
   input {
-    width: 100vh;
+    width: 70vh;
     padding-left: 2vh;
     height: 5vh;
     font-size: 2.5vh;
@@ -39,15 +39,25 @@ export const Content = styled.div`
     border-width: 0.3vh;
   }
 
-  @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  @media (min-width: 400px) and (max-width: 800px) {
     text-align: center;
     input {
       width: 40vh;
     }
     .link-name {
-      margin: 0;
-      font-size: 2.5vh;
-      margin-bottom: 2vh;
+      font-size: 2.3vh;
+      margin-top: 1.2vh;
+    }
+  }
+
+  @media (min-width: 200px) and (max-width: 399px) {
+    text-align: center;
+    input {
+      width: 30vh;
+    }
+    .link-name {
+      margin-top: 1.2vh;
+      font-size: 2.3vh;
     }
   }
 `;

@@ -27,6 +27,13 @@ export const Content = styled.div`
       }
     }
 
+    @media (min-width: 400px) and (max-width: 800px) {
+      margin: 10px;
+      h3 {
+        font-size: 1vh;
+      }
+    }
+
     h2,
     h3 {
       font-size: 2.5vh;
@@ -35,12 +42,20 @@ export const Content = styled.div`
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
         font-size: 1.7vh;
       }
+
+      @media (min-width: 400px) and (max-width: 800px) {
+        font-size: 2vh;
+      }
     }
 
     h3 {
       font-size: 1.8vh;
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
         font-size: 1.1vh;
+      }
+
+      @media (min-width: 400px) and (max-width: 800px) {
+        font-size: 1.5vh;
       }
     }
     .logo-and-name {
@@ -50,11 +65,19 @@ export const Content = styled.div`
       a {
         color: black;
         font-weight: bold;
+        margin: auto;
       }
 
       @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-        font-size: 1.2vh;
-        padding-right: 1vh;
+        font-size: 2vh;
+        padding-right: 2vh;
+      }
+
+      @media (min-width: 400px) and (max-width: 800px) {
+        font-size: 3vh;
+        a {
+          margin: auto;
+        }
       }
 
       img {
