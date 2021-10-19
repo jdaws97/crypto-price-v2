@@ -268,6 +268,7 @@ const Searchresult = ({ match }) => {
                 color: percentChange < 0 ? "red" : "green",
               }}
             >
+              {percentChange < 0 ? null : "+"}
               {percentChange}%
             </h3>
           </div>

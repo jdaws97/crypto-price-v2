@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   height: 1100px;
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   text-align: center;
+  font-family: "Source Sans Pro", sans-serif;
   .no-search {
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
       img {
@@ -33,7 +34,8 @@ export const Content = styled.div`
     h3 {
       margin: auto 0;
       font-size: 2vh;
-      margin-left: 2vh;
+
+      margin: auto 1vh;
       padding: 0.5vh;
     }
   }

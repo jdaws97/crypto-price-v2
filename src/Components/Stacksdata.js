@@ -12,7 +12,7 @@ const Stacksdata = async () => {
       return console.log(event);
     }
   );
-  await sub.unsubscribe();
+  // await sub.unsubscribe();
 
   return console.log(sub);
 };

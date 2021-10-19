@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   margin: auto;
   max-width: 1910px;
   background: white;
+  font-family: "Source Sans Pro", sans-serif;
   @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   }
 `;
