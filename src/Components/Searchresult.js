@@ -255,10 +255,10 @@ const Searchresult = ({ match }) => {
             </h3>
           </div>
           <div className="coin-params">
-            <h2>Price: ${coinData.current_price}</h2>
-            <h2>24hr High: ${coinData.high_24h}</h2>
-            <h2>24hr Low: ${coinData.low_24h}</h2>
-            <h2>Market Cap: ${coinData.market_cap}</h2>
+            <h2>Price: {"$" + coinData.current_price}</h2>
+            <h2>24hr High: {"$" + coinData.high_24h}</h2>
+            <h2>24hr Low: {"$" + coinData.low_24h}</h2>
+            <h2>Market Cap: {"$" + coinData.market_cap}</h2>
           </div>
           <div className="chart-graph">
             <Line data={chartData} options={options} width={400} height={400} />
