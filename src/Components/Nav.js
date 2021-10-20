@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useHomeHook } from "./Hooks/useHomeHook";
-import { Redirect, useHistory, Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+
+import { useHistory, Link } from "react-router-dom";
 import { Wrapper, Content } from "./Nav.style";
 
 const Nav = () => {
@@ -9,7 +9,7 @@ const Nav = () => {
   // temp search hook for this component
   const [search, setSearch] = useState("");
   const [bool, setBool] = useState(false);
-  const initial = useRef(true);
+
   //setSearch state hook needs to be wrapped to
   //const wrappingSetSearch = () => {
   //return setSearch;
@@ -18,11 +18,6 @@ const Nav = () => {
     setBool(true);
     e.preventDefault();
     return;
-  };
-
-  const goToHome = (e) => {
-    history.push(`/`);
-    e.preventDefault();
   };
 
   const updateSearchResult = (e) => {
@@ -37,7 +32,7 @@ const Nav = () => {
       history.push(`/results/${search}`);
     }
     setBool(false);
-  });
+  }, [bool]);
 
   return (
     // console.log(search),

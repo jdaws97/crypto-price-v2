@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import CoinGecko from "coingecko-api";
 import { Wrapper, Content } from "./Searchresult.style";
-import { useHomeHook } from "./Hooks/useHomeHook";
+
 import { Line } from "react-chartjs-2";
 import noCoin from "../Images/no-coins-for-you-.jpg";
 
@@ -51,12 +51,12 @@ const Searchresult = ({ match }) => {
 
     if (
       mapNamesToLowerCase.find(
-        (e) => e.name == searchWithOutSpaces.toLowerCase()
+        (e) => e.name === searchWithOutSpaces.toLowerCase()
       )
     ) {
       // Filtering the data for the specific coin //
       const findCoinData = mapNamesToLowerCase.filter(
-        (e) => e.name == searchWithOutSpaces.toLowerCase()
+        (e) => e.name === searchWithOutSpaces.toLowerCase()
       );
 
       // Created an array of the coins ID's just in case //
@@ -73,14 +73,12 @@ const Searchresult = ({ match }) => {
       );
       // Creating cleaner variables to be able to set my states //
       const marketChartPrice = marketChart.data.prices;
-      const marketChartData = marketChart.data;
-      const coinPrice = cleanCoinData.current_price;
-      const coinImage = cleanCoinData.image;
+
       const coinName =
         cleanCoinData.name.charAt(0).toUpperCase() +
         cleanCoinData.name.slice(1);
       const coinPercentChange = cleanCoinData.market_cap_change_percentage_24h;
-      const hourHigh = cleanCoinData.high_24h;
+
       return (
         console.log(cleanCoins),
         // Setting all my states //
@@ -95,22 +93,6 @@ const Searchresult = ({ match }) => {
       return setCheckForSearchResult(false);
     }
   };
-  // Created an array just for the market time, converting from //
-  // Unix TIMESTAMP to Month, Date, Year //
-  const marketDataTime = marketData.map((e) =>
-    new Date(e[0]).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "2-digit",
-    })
-  );
-  // Creating an array just for the market price //
-  const marketDataPrice = marketData.map((e) => e[1]);
-
-  // Created an array with $ sign attached for use at some point //
-  const marketDataPriceDollarSign = marketDataPrice.map(
-    (e) => (e = ("$" + Math.round(e)).toString())
-  );
 
   // Formatting the object for x and y axis data //
   let changeElementsInMarketData = marketData.map((e) => ({
@@ -256,12 +238,12 @@ const Searchresult = ({ match }) => {
     return () => clearTimeout(timer);
   }, [match.params.searchresult]);
 
-  if (checkForSearchResult == true) {
+  if (checkForSearchResult === true) {
     return (
       <Wrapper>
         <Content>
           <div className="coin-descr">
-            <img src={coinData.image} />
+            <img alt="coin-img" src={coinData.image} />
             <h1>{coinName}</h1>
             <h3
               style={{
@@ -289,7 +271,7 @@ const Searchresult = ({ match }) => {
       <Wrapper>
         <div className="no-search">
           <h1>No search result found</h1>
-          <img src={noCoin}></img>
+          <img alt="" src={noCoin}></img>
         </div>
       </Wrapper>
     );

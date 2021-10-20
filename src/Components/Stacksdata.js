@@ -1,4 +1,3 @@
-import React from "react";
 import { connectWebSocketClient } from "@stacks/blockchain-api-client";
 
 const Stacksdata = async () => {

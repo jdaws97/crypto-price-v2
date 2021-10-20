@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 //style import
 import { Wrapper, Content } from "./Home.style";
 // import hooks
@@ -9,7 +9,6 @@ const Home = () => {
   //Set States
 
   const { data } = useHomeHook();
-  const numbers = 1;
 
   return (
     <Wrapper>
@@ -40,6 +39,7 @@ const Home = () => {
               </div>
             );
           }
+          return;
         })}
       </Content>
     </Wrapper>

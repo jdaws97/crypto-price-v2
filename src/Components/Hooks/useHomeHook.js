@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import CoinGecko from "coingecko-api";
 
 const CoinGeckoClient = new CoinGecko();
