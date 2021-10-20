@@ -32,10 +32,9 @@ const Nav = () => {
       history.push(`/results/${search}`);
     }
     setBool(false);
-  }, [bool]);
+  }, [bool, history, search]);
 
   return (
-    // console.log(search),
     <Wrapper>
       <Content>
         <Link className="link-name" to="/">

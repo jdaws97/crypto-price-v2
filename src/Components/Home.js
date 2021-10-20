@@ -28,8 +28,8 @@ const Home = () => {
                     {e.name}
                   </Link>
                 </div>
-                <h3>24Hr High: ${e.high_24h.toLocaleString()}</h3>
-                <h3>24Hr Low: ${e.low_24h.toLocaleString()}</h3>
+                <h3>24Hr High: {"$" + e.high_24h.toLocaleString()}</h3>
+                <h3>24Hr Low: {"$" + e.low_24h.toLocaleString()}</h3>
                 <h2>
                   $
                   {e.current_price.toLocaleString(undefined, {
@@ -39,7 +39,6 @@ const Home = () => {
               </div>
             );
           }
-          return;
         })}
       </Content>
     </Wrapper>
