@@ -38,7 +38,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://www.skyola.us",
+  "homepage": "https://optimistic-feynman-90a1d3.netlify.app",
   "browserslist": {
     "production": [
       ">0.2%",
