@@ -5,25 +5,25 @@
   "dependencies": {
     "@stacks/blockchain-api-client": "^0.69.0",
     "@stacks/bns": "^2.0.1",
-    "@stacks/network": "^2.0.1",
-    "@testing-library/jest-dom": "^5.14.1",
+    "@stacks/network": "^2.0.2",
+    "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.23.0",
     "canvasjs": "^1.8.3",
-    "chart.js": "^3.5.1",
+    "chart.js": "^3.6.2",
     "chartjs-adapter-moment": "^1.0.0",
     "coingecko-api": "^1.0.10",
-    "d3": "^7.0.1",
+    "d3": "^7.2.1",
     "express": "^4.17.1",
     "moment": "^2.29.1",
     "react": "^17.0.2",
-    "react-chartjs-2": "^3.1.0",
+    "react-chartjs-2": "^3.3.0",
     "react-dom": "^17.0.2",
     "react-moment": "^1.1.1",
     "react-router-dom": "^5.3.0",
     "react-scripts": "^4.0.3",
-    "styled-components": "^5.3.1",
+    "styled-components": "^5.3.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -38,7 +38,7 @@
       "react-app/jest"
     ]
   },
-  "homepage": "https://optimistic-feynman-90a1d3.netlify.app",
+  "homepage": "https://eloquent-golick-1361c8.netlify.app/",
   "browserslist": {
     "production": [
       ">0.2%",
